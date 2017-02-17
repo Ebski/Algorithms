@@ -4,3 +4,6 @@ D:\School\1.Semester\Algorithms\AlgorithmsWeek3\AlgorithmsWeek3\bin\Debug\Algori
 D:\School\1.Semester\Algorithms\AlgorithmsWeek3\AlgorithmsWeek3\obj\Debug\AlgorithmsWeek3.csprojResolveAssemblyReference.cache
 D:\School\1.Semester\Algorithms\AlgorithmsWeek3\AlgorithmsWeek3\obj\Debug\AlgorithmsWeek3.exe
 D:\School\1.Semester\Algorithms\AlgorithmsWeek3\AlgorithmsWeek3\obj\Debug\AlgorithmsWeek3.pdb
+D:\School\1.Semester\Algorithms\Week 3\AlgorithmsWeek3\AlgorithmsWeek3\bin\Debug\AlgorithmsWeek3.exe.config
+D:\School\1.Semester\Algorithms\Week 3\AlgorithmsWeek3\AlgorithmsWeek3\obj\Debug\AlgorithmsWeek3.exe
+D:\School\1.Semester\Algorithms\Week 3\AlgorithmsWeek3\AlgorithmsWeek3\obj\Debug\AlgorithmsWeek3.pdb

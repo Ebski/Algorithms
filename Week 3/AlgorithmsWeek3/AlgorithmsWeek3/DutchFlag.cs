@@ -34,13 +34,15 @@ namespace AlgorithmsWeek3
             for (int i = 0; i < flagArray.Length; i++)
             {
                 int value = flagArray[index];
-                if(value == 0)
+                if (value == 0)
                 {
                     swap(value);
-                } else if (value == 1)
+                }
+                else if (value == 1)
                 {
                     index++;
-                } else
+                }
+                else
                 {
                     swap(value);
                 }
@@ -51,9 +53,6 @@ namespace AlgorithmsWeek3
             for (int i = 0; i < flagArray.Length; i++)
             {
                 Console.WriteLine(flagArray[i]);
-            }
-            {
-
             }
         }
 

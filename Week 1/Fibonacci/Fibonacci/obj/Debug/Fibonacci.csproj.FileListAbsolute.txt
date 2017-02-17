@@ -4,3 +4,6 @@ D:\School\1.Semester\Algorithms\Fibonacci\Fibonacci\bin\Debug\Fibonacci.exe
 D:\School\1.Semester\Algorithms\Fibonacci\Fibonacci\bin\Debug\Fibonacci.pdb
 D:\School\1.Semester\Algorithms\Fibonacci\Fibonacci\obj\Debug\Fibonacci.exe
 D:\School\1.Semester\Algorithms\Fibonacci\Fibonacci\obj\Debug\Fibonacci.pdb
+D:\School\1.Semester\Algorithms\Week 1\Fibonacci\Fibonacci\bin\Debug\Fibonacci.exe.config
+D:\School\1.Semester\Algorithms\Week 1\Fibonacci\Fibonacci\obj\Debug\Fibonacci.exe
+D:\School\1.Semester\Algorithms\Week 1\Fibonacci\Fibonacci\obj\Debug\Fibonacci.pdb

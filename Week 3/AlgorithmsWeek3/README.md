@@ -22,3 +22,13 @@ Code for the algorithm can be found [here](https://github.com/Ebski/Algorithms/b
 Given an array of n buckets, each containing a red, white, or blue pebble, sort them by color.The allowed operations are:•swap(i,j): swap the pebble in bucket i with the pebble in bucket j.•color(i): color of pebble in bucket i.The performance requirements are as follows:•At most n calls to color().•At most n calls to swap().Constant extra space
 
 Code can be found [here](https://github.com/Ebski/Algorithms/blob/master/Week%203/AlgorithmsWeek3/AlgorithmsWeek3/DutchFlag.cs)
+
+##Tasks from "Algorithm Book"
+### 1.3.27 && 1.3.28
+Write a method max() that takes a reference to the first node in a linked list as
+argument and returns the value of the maximum key in the list. Assume that all keys are
+positive integers, and return 0 if the list is empty.
+
+Develop a recursive solution to the previous question.
+
+The linked list and the two different max methods can be found [here](https://github.com/Ebski/Algorithms/blob/master/Week%203/AlgorithmsWeek3/AlgorithmsWeek3/LinkedList.cs)

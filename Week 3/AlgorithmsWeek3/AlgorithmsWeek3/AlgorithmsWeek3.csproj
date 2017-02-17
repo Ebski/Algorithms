@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="BinaryRepresentation.cs" />
     <Compile Include="DutchFlag.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="MaxInLinkedList.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,6 @@
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\bin\Debug\FirstStudyPointExcersize.exe.config
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\bin\Debug\FirstStudyPointExcersize.exe
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\bin\Debug\FirstStudyPointExcersize.pdb
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\obj\Debug\FirstStudyPointExcersize.csprojResolveAssemblyReference.cache
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\obj\Debug\FirstStudyPointExcersize.exe
+D:\School\1.Semester\Algorithms\FirstStudyPointExcersize\FirstStudyPointExcersize\obj\Debug\FirstStudyPointExcersize.pdb

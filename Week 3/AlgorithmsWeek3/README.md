@@ -32,3 +32,13 @@ positive integers, and return 0 if the list is empty.
 Develop a recursive solution to the previous question.
 
 The linked list and the two different max methods can be found [here](https://github.com/Ebski/Algorithms/blob/master/Week%203/AlgorithmsWeek3/AlgorithmsWeek3/LinkedList.cs)
+
+###2.1.14
+Dequeue sort. Explain how you would sort a deck of cards, with the restriction
+that the only allowed operations are to look at the values of the top two cards, to
+exchange the top two cards, and to move the top card to the bottom of the deck.
+
+I would put the first card to the back of the deck until I found my number one card.
+When that card is found I would swap it and put the new first card to the backuntil my number 2 card was right after the first card. Both thoose cards would then go to the back, and I would look for my third card. When third card is found I would swap and put the new first card behind the deck until The 3 card is after the second card. Then put both in the back and continue until all cards are ordered.
+
+Check solution [here](https://github.com/Ebski/Algorithms/blob/master/Week%203/AlgorithmsWeek3/AlgorithmsWeek3/DequeSort.cs)

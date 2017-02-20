@@ -14,7 +14,11 @@ namespace AlgorithmsWeek3
             Console.WriteLine();
             Console.WriteLine("1.3.27 & 1.3.28");
             MaxInLinkedList list = new MaxInLinkedList(20, 100);
-            
+
+            Console.WriteLine();
+            Console.WriteLine("2.1.14");
+            DequeSort ds = new DequeSort(52);
+
             while (true) ;
         }
     }

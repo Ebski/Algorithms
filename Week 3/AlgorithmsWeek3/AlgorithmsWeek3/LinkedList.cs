@@ -15,12 +15,28 @@ namespace AlgorithmsWeek3
         //}
 
         public Node head { get; set; }
+        public Node tails { get; set; }
 
         public void AddFirst(int data)
         {
             Node toAdd = new Node();
 
             toAdd.data = data;
+            toAdd.next = head;
+
+            head = toAdd;
+        }
+
+        public void AddFirstWithTailsPointer(int data)
+        {
+            Node toAdd = new Node();
+            toAdd.data = data;
+
+            if (head == null)
+            {
+                tails = toAdd;
+            }
+            tails.next = toAdd;
             toAdd.next = head;
 
             head = toAdd;
@@ -41,6 +57,7 @@ namespace AlgorithmsWeek3
 
         public int MaxRecursive(Node current, int max)
         {
+            if (current == null) { return 0; }
             if (current.data > max) { max = current.data; }
             if (current.next == null) { return max; }
             else { return MaxRecursive(current.next, max); }

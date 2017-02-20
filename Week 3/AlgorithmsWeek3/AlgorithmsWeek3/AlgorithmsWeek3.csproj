@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryRepresentation.cs" />
+    <Compile Include="DequeSort.cs" />
     <Compile Include="DutchFlag.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="MaxInLinkedList.cs" />

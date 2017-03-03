@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AlgorithmsWeek3
 {
-    class BinaryRepresentation
+    public class BinaryRepresentation
     {
         public void binaryRepresentation(int n)
         {

@@ -2,9 +2,9 @@
 
 namespace AlgorithmsWeek3
 {
-    class DutchFlag
+    public class DutchFlag
     {
-        Random ran = new Random();
+        private Random ran = new Random();
         private int[] flagArray;
         private int low;
         private int high;
@@ -27,28 +27,28 @@ namespace AlgorithmsWeek3
 
         public void paintFlag()
         {
-            for (int i = 0; i < flagArray.Length; i++)
+            foreach (int color in flagArray)
             {
                 int value = flagArray[index];
-                if (value == 0)
+                switch (value)
                 {
-                    swap(value);
-                }
-                else if (value == 1)
-                {
-                    index++;
-                }
-                else
-                {
-                    swap(value);
+                    case 0:
+                        swap(value);
+                        break;
+                    case 1:
+                        index++;
+                        break;
+                    default:
+                        swap(value);
+                        break;
                 }
                 numberOfLooks++;
             }
 
             Console.WriteLine("Flag created, Number of Swaps were " + numberOfSwaps + " and number of looks where " + numberOfLooks);
-            for (int i = 0; i < flagArray.Length; i++)
+            foreach (int color in flagArray)
             {
-                Console.WriteLine(flagArray[i]);
+                Console.WriteLine(color);
             }
         }
 

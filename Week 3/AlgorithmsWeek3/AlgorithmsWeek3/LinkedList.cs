@@ -6,31 +6,24 @@ using System.Threading.Tasks;
 
 namespace AlgorithmsWeek3
 {
-    class LinkedList
+    internal class LinkedList
     {
-        //public class Node
-        //{
-        //    public Node next;
-        //    public int data;
-        //}
-
         public Node head { get; set; }
         public Node tails { get; set; }
 
         public void AddFirst(int data)
         {
-            Node toAdd = new Node();
-
-            toAdd.data = data;
-            toAdd.next = head;
-
+            Node toAdd = new Node
+            {
+                data = data,
+                next = head
+            };
             head = toAdd;
         }
 
         public void AddFirstWithTailsPointer(int data)
         {
-            Node toAdd = new Node();
-            toAdd.data = data;
+            Node toAdd = new Node {data = data};
 
             if (head == null)
             {
@@ -59,8 +52,8 @@ namespace AlgorithmsWeek3
         {
             if (current == null) { return 0; }
             if (current.data > max) { max = current.data; }
-            if (current.next == null) { return max; }
-            else { return MaxRecursive(current.next, max); }
+            // ReSharper disable once TailRecursiveCall
+            return current.next == null ? max : MaxRecursive(current.next, max);
         }
     }
 

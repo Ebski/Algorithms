@@ -2,7 +2,7 @@
 
 namespace AlgorithmsWeek3
 {
-    class MaxInLinkedList
+    public class MaxInLinkedList
     {
         public MaxInLinkedList(int noOfNodes, int MaxIntVal)
         {

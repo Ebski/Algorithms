@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AlgorithmsWeek3
 {
-    class DequeSort
+    public class DequeSort
     {
-        LinkedList deck;
-        LinkedList shuffledDeck;
-        int numberOfCards = 0;
+        // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
+        private LinkedList deck;
+        private LinkedList shuffledDeck;
+        private int numberOfCards = 0;
 
         public DequeSort(int n)
         {
@@ -51,11 +52,12 @@ namespace AlgorithmsWeek3
         /// </summary>
         /// <param name="deck"></param>
         /// <param name="n"></param>
-        public void shuffle(LinkedList deck, int n)
+        private void shuffle(LinkedList deck, int n)
         {
             int count = 0;
             Random ran = new Random();
-            Node randomNode = new Node();
+            // ReSharper disable once TooWideLocalVariableScope
+            Node randomNode;
             Node node = new Node();
             for (int i = n; i > 0; i--)
             {
@@ -86,8 +88,10 @@ namespace AlgorithmsWeek3
         /// Sorts a linked list that increments with 1
         /// </summary>
         /// <param name="deck"></param>
-        public void sort(LinkedList deck)
+        // ReSharper disable once ParameterHidesMember
+        private void sort(LinkedList deck)
         {
+            if (deck == null) throw new ArgumentNullException(nameof(deck));
             Node current = deck.head;
             Node last = deck.tails;
             int count = 3;
@@ -121,11 +125,11 @@ namespace AlgorithmsWeek3
             {
                 if (current.data == count)
                 {
-                    while(current.next.data != 1) 
+                    while (current.next.data != 1)
                     {
                         last = (swap(current, current.next, last));
                     }
-                    for (int i = 0; i < count-1; i++)
+                    for (int i = 0; i < count - 1; i++)
                     {
                         last = (swap(current, current.next, last));
                     }
@@ -139,19 +143,12 @@ namespace AlgorithmsWeek3
                     current = current.next;
                 }
             }
-
-            //Finds 1 and sets it as number the first card in the deck
-            //while (current.data != 1)
-            //{
-            //    current = current.next;
-            //}
-            //shuffledDeck.head = current;
         }
 
         /// <summary>
         /// Swaps the current node and the next node. Then sets the new first node to last and returns it.
         /// </summary>
-        public Node swap(Node current, Node next, Node last)
+        private static Node swap(Node current, Node next, Node last)
         {
             last.next = current.next;
             last = last.next;

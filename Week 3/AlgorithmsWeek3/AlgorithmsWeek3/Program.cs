@@ -20,7 +20,6 @@ namespace AlgorithmsWeek3
             while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape))
             {
             }
-
         }
     }
 }

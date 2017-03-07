@@ -9,3 +9,6 @@ This reposotory includes every excersize and hand in for the Algoritm class in t
 
 ##Week 3
 [Excersizes for Week 3](https://github.com/Ebski/Algorithms/tree/master/Week%203/AlgorithmsWeek3)
+
+##Week 4
+[Hand in for Week 4](https://github.com/Ebski/Algorithms/tree/master/Week%204/Algorithms_Second_Handin)

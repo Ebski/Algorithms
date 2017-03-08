@@ -8,8 +8,8 @@ namespace Algorithms_Second_Handin.SortingFunctions
 {
     public class MergeSort
     {
-        public static void sort<T>(T[] a)
-    where T : IComparable<T>
+        public static void sort<T>(T[] a) 
+            where T : IComparable<T>
         {
             sort(a, 0, a.Length);
         }

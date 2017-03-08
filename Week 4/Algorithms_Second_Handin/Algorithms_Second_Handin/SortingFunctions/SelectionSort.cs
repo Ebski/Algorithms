@@ -1,25 +1,30 @@
-﻿namespace Algorithms_Second_Handin.SortingFunctions
+﻿using System;
+using System.Net;
+
+namespace Algorithms_Second_Handin.SortingFunctions
 {
     public class SelectionSort
     {
-        public static int[] sort(int[] numArray)
+        public static T[] sort<T>(T[] a)
+            where T : IComparable<T>
         {
-            int smallestIndex, index, minIndex, temp;
-            for (index = 0; index < numArray.Length - 1; index++)
+            int smallestIndex;
+            T temp;
+            for (int i = 0; i < a.Length; i++)
             {
-                smallestIndex = index;
-                for (minIndex = index; minIndex < numArray.Length; minIndex++)
+                smallestIndex = i;
+                for (int j = i; j < a.Length; j++)
                 {
-                    if (numArray[minIndex] < numArray[smallestIndex])
+                    if (a[j].CompareTo(a[smallestIndex]) < 0)
                     {
-                        smallestIndex = minIndex;
+                        smallestIndex = j;
                     }
                 }
-                temp = numArray[smallestIndex];
-                numArray[smallestIndex] = numArray[index];
-                numArray[index] = temp;
+                temp = a[smallestIndex];
+                a[smallestIndex] = a[i];
+                a[i] = temp;
             }
-            return numArray;
+            return a;
         }
     }
 }

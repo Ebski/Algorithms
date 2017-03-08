@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Algorithms_Second_Handin._2._1._31
+namespace Algorithms_Second_Handin._2._1._31.Insertion
 {
     public class InsertionValidation
     {

@@ -5,18 +5,19 @@ namespace Algorithms_Second_Handin.SortingFunctions
 {
     public class InsertionSort
     {
-        public static int[] sort(int[] numArray)
+        public static T[] sort<T>(T[] a)
+            where T : IComparable<T>
         {
-            for (int i = 0; i < numArray.Length; i++)
+            for (int i = 0; i < a.Length; i++)
             {
                 int j = i;
                 while (j > 0)
                 {
-                    if (numArray[j - 1] > numArray[j])
+                    if (a[j - 1].CompareTo(a[j]) > 0)
                     {
-                        int temp = numArray[j - 1];
-                        numArray[j - 1] = numArray[j];
-                        numArray[j] = temp;
+                        T temp = a[j - 1];
+                        a[j - 1] = a[j];
+                        a[j] = temp;
                         j--;
                     }
                     else
@@ -25,7 +26,7 @@ namespace Algorithms_Second_Handin.SortingFunctions
                     }
                 }
             }
-            return numArray;
+            return a;
         }
 
         public static void printIntArray(int[] numArray)

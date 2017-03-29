@@ -28,7 +28,8 @@ namespace BinarySearchTree
             bst.put(15, 15);
             bst.put(14, 14);
             bst.put(16, 16);
-            bst.delete(7);
+            bst.delete(5);
+            bst.put(5,5);
             Queue<int> q = bst.keys();
             while (q.Count > 0)
             {

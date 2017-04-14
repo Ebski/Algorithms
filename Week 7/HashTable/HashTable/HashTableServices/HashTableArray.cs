@@ -10,12 +10,12 @@ namespace HashTable.HashTableServices
 {
     public class HashTableArray<k, v> : HashTableInterface<k, v>
     {
-        private Node[] arr;
+        private Node[] array;
         private int count;
 
         public HashTableArray()
         {
-            arr = new Node[8];
+            array = new Node[8];
             count = 0;
         }
 
@@ -25,18 +25,18 @@ namespace HashTable.HashTableServices
 
             while (true)
             {
-                if (arr[index] == null)
+                if (array[index] == null)
                 {
-                    arr[index] = new Node(key, value);
+                    array[index] = new Node(key, value);
                     ++count;
-                    increaseArr();
+                    increaseArray();
                     return default(v);
                 }
 
-                if (arr[index].key.Equals(key))
+                if (array[index].key.Equals(key))
                 {
-                    v oldValue = arr[index].value;
-                    arr[index] = new Node(key, value);
+                    v oldValue = array[index].value;
+                    array[index] = new Node(key, value);
                     return oldValue;
                 }
 
@@ -49,8 +49,8 @@ namespace HashTable.HashTableServices
             int index = getIndex(key);
             while (true)
             {
-                if (arr[index] == null) return default(v);
-                if (arr[index].key.Equals(key)) return arr[index].value;
+                if (array[index] == null) return default(v);
+                if (array[index].key.Equals(key)) return array[index].value;
                 index = increaseIndex(index);
             }
         }
@@ -70,13 +70,13 @@ namespace HashTable.HashTableServices
             int index = getIndex(key);
             while (true)
             {
-                if (arr[index] == null) break;
-                if (arr[index].key.Equals(key))
+                if (array[index] == null) break;
+                if (array[index].key.Equals(key))
                 {
-                    arr[index] = null;
+                    array[index] = null;
                     restructureArray(index + 1);
                     count--;
-                    decreseArr();
+                    decreseArray();
                     break;
                 }
                 index = increaseIndex(index);
@@ -85,21 +85,21 @@ namespace HashTable.HashTableServices
 
         private int getIndex(k key)
         {
-            return Math.Abs(key.GetHashCode()) % arr.Length;
+            return Math.Abs(key.GetHashCode()) % array.Length;
         }
 
         private int increaseIndex(int index)
         {
             ++index;
-            if (index >= arr.Length) index = 0;
+            if (index >= array.Length) index = 0;
             return index;
         }
 
-        private void increaseArr()
+        private void increaseArray()
         {
-            if ((count * 10) / arr.Length <= 4) return;
-            Node[] oldArray = arr;
-            arr = new Node[arr.Length * 2];
+            if ((count * 10) / array.Length <= 4) return;
+            Node[] oldArray = array;
+            array = new Node[array.Length * 2];
             count = 0;
             foreach (Node n in oldArray)
             {
@@ -107,11 +107,11 @@ namespace HashTable.HashTableServices
             }
         }
 
-        private void decreseArr()
+        private void decreseArray()
         {
-            if ((count * 10) / arr.Length >= 1) return;
-            Node[] oldArray = arr;
-            arr = new Node[arr.Length / 2];
+            if ((count * 10) / array.Length >= 3) return;
+            Node[] oldArray = array;
+            array = new Node[array.Length / 2];
             count = 0;
             foreach (Node n in oldArray)
             {
@@ -121,12 +121,12 @@ namespace HashTable.HashTableServices
 
         private void restructureArray(int index)
         {
-            Node[] nodes = new Node[arr.Length];
-            for (int i = 0; i < arr.Length; i++)
+            Node[] nodes = new Node[array.Length];
+            for (int i = 0; i < array.Length; i++)
             {
-                if (arr[index] == null) break;
-                nodes[i] = arr[index];
-                arr[index] = null;
+                if (array[index] == null) break;
+                nodes[i] = array[index];
+                array[index] = null;
                 index = increaseIndex(index);
             }
 
